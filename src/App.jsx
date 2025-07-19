@@ -1,4 +1,3 @@
-import './css/App.css'
 import Navbar from './Components/navbar.jsx'
 
 function App() {
