@@ -1,31 +1,31 @@
-function footer() {
-    return (
-        <footer class="bg-light text-dark mt-5 border-top py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <strong>LaPriel Floral Design</strong> &copy; 2025. All rights reserved.
-                </div>
-                <div class="col-md-6">
-                    <ul class="nav justify-content-center justify-content-md-end">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-dark">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-dark">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-dark">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-dark">Book Now</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-            </div>
-        </footer>
-    )
-}
+import { Link } from "react-router-dom";
 
-export default footer
+export default function Footer() {
+  return (
+    <footer className="bg-light text-dark mt-auto border-top py-4">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <strong>Lapriel Floral Design</strong> &copy; 2025. All rights reserved.
+          </div>
+          <div className="col-md-6">
+            <ul className="nav justify-content-center justify-content-md-end">
+              <li className="nav-item">
+                <Link className="nav-link px-2 text-dark" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link px-2 text-dark" to="/about">About</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link px-2 text-dark" to="/pricing">Pricing</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link px-2 text-dark" to="/booking">Book Now</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

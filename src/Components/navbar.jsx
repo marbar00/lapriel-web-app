@@ -1,41 +1,43 @@
+import { Link, useLocation } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+export default function Navbar() {
+  const location = useLocation();
 
-function navbar() {
-    return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
-            <div class="container">
-                <a class="navbar-brand fw-bold text-primary" href="#">LaPriel Floral Design</a>
-                <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                >
-                <span class="navbar-toggler-icon"></span>
-                </button>
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm py-3">
+      <div className="container">
+        <Link className="navbar-brand fw-bold text-primary" to="/">Lapriel Floral Design</Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-lg-center">
-                    <li class="nav-item mx-2">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                    <a class="btn btn-primary px-4 py-2" href="#">Book Now</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-    )
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav align-items-lg-center">
+            <li className="nav-item mx-2">
+              <Link className={`nav-link ${location.pathname === '/' ? 'active' : ''}`} to="/">Home</Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`} to="/about">About</Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link className={`nav-link ${location.pathname === '/pricing' ? 'active' : ''}`} to="/pricing">Pricing</Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link className="btn btn-primary px-4 py-2" to="/booking">Book Now</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 }
-
-export default navbar
