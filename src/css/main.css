@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 .handlee-font {
   font-family: 'Handlee', sans-serif;
+}
+
+.apricots-font {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.cambria-font {
+  font-family: Cambria, "Times New Roman", serif;
 }
 
 .navbar, footer {
@@ -15,4 +24,8 @@
 
 body {
   background-color: #fffbec;
+}
+
+.faqs {
+  background-color: #dad8f9;
 }
