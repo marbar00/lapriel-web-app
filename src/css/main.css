@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+.handlee-font {
+  font-family: 'Handlee', sans-serif;
+}
+
+.navbar, footer {
+  background-color: #dad8f9;
+}
+
+.navbar-logo {
+  height: 60px;
+  width: auto;
+}
+
+body {
+  background-color: #fffbec;
+}
