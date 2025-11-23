@@ -6,7 +6,7 @@ export function Layout() {
     return(
         <div className="min-vh-100 d-flex flex-column">
             <Navbar />
-                <main className="flex-grow-1 container py-4">
+                <main className="flex-grow-1 p-0">
                     <Outlet />
                 </main>
             <Footer />

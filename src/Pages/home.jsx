@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import homeLogo from '../assets/homeLogo.png'
 import arch from '../assets/arch.png'
+import { useState } from "react";
 
 export function Home() {
+  const [open1, setOpen1] = useState(false);
+  const [open2, setOpen2] = useState(false);
+  const [open3, setOpen3] = useState(false);
 
   return (
-    <div className="container-fluid d-flex flex-column justify-content-center align-items-center text-center">
+    <div className="container mb-5 d-flex flex-column justify-content-center align-items-center text-center">
       
       <div className="row w-100 my-4">
         <div className="col">
@@ -39,26 +43,59 @@ export function Home() {
           <h3>FAQs</h3>
         </div>
       </div>
-      <div className="row my-2">
-        <div className="col">
-          <button className="btn border border-dark px-2 py-2 apricots-font faqs">
-            <text>Do you have a budget minimum?</text>
-          </button>
-        </div>
+
+      <div className="my-2" style={{ width: "70%"}}>
+        <button
+          className="btn border border-dark px-3 py-2 apricots-font faqs d-flex justify-content-between align-items-center w-100"
+          onClick={() => setOpen1(!open1)}
+        >
+          <span>Do you have a budget minimum?</span>
+          <span>{open1 ? "v" : ">"}</span>
+        </button>
+
+        {open1 && (
+          <div className="mt-2 p-2 border border-dark rounded bg-light w-100">
+            <p className="mb-0 apricots-font">
+              I don’t! I can work with any budget to make your day special. I’ve got lots of tips to help you maximize your budget!
+            </p>
+          </div>
+        )}
       </div>
-      <div className="row my-2">
-        <div className="col">
-          <button className="btn border border-dark px-2 py-2 apricots-font faqs">
-            <text>Do you have a budget minimum?</text>
-          </button>
-        </div>
+
+      <div className="my-2" style={{ width: "70%"}}>
+        <button
+          className="btn border border-dark px-3 py-2 apricots-font faqs d-flex justify-content-between align-items-center w-100"
+          onClick={() => setOpen2(!open2)}
+        >
+          <span>Do you have a budget minimum?</span>
+          <span>{open2 ? "v" : ">"}</span>
+        </button>
+
+        {open2 && (
+          <div className="mt-2 p-2 border border-dark rounded bg-light w-100">
+            <p className="mb-0 apricots-font">
+              I don’t! I can work with any budget to make your day special. I’ve got lots of tips to help you maximize your budget!
+            </p>
+          </div>
+        )}
       </div>
-      <div className="row my-2">
-        <div className="col">
-          <button className="btn border border-dark px-2 py-2 apricots-font faqs">
-            <text>Do you have a budget minimum?</text>
-          </button>
-        </div>
+
+      <div className="my-2" style={{ width: "70%"}}>
+        <button
+          className="btn border border-dark px-3 py-2 apricots-font faqs d-flex justify-content-between align-items-center w-100"
+          onClick={() => setOpen3(!open3)}
+        >
+          <span>Do you have a budget minimum?</span>
+          <span>{open3 ? "v" : ">"}</span>
+        </button>
+
+        {open3 && (
+          <div className="mt-2 p-2 border border-dark rounded bg-light w-100">
+            <p className="mb-0 apricots-font">
+              I don’t! I can work with any budget to make your day special. I’ve got lots of tips to help you maximize your budget!
+            </p>
+          </div>
+        )}
       </div>
 
     </div>
